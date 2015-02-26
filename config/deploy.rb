@@ -1,6 +1,10 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
+set :ssh_options, {
+  forward_agent: true
+}
+
 set :application, 'workshop'
 set :repo_url, 'git@github.com:charlespeach/workshop.git'
 
